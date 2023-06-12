@@ -32,15 +32,15 @@ size_t height(const binary_tree_t *tree)
  */
 int is_avl_helper(const binary_tree_t *tree, int lo, int hi)
 {
-	size_t lhgt, rhgt, diff;
+	size_t lefh, righ, diff;
 
 	if (tree != NULL)
 	{
 		if (tree->n < lo || tree->n > hi)
 			return (0);
-		lhgt = height(tree->left);
-		rhgt = height(tree->right);
-		diff = lhgt > rhgt ? lhgt - rhgt : rhgt - lhgt;
+		lefh = height(tree->left);
+		righ = height(tree->right);
+		diff = lefh > righ ? lefh - righ : righ - lefh;
 		if (diff > 1)
 			return (0);
 		return (is_avl_helper(tree->left, lo, tree->n - 1) &&
