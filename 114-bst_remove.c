@@ -85,7 +85,7 @@ bst_t *bst_remove_recursive(bst_t *root, bst_t *node, int value)
  * @root: Pointer to root node of BST to remove node from.
  * @value: Value to be removed in the BST.
  * Return: Pointer to new root node after deletion.
- * Description: If node to be deleted has two children, 
+ * Description: If node to be deleted has two children,
  * replace with its 'first in-order' successor.
  */
 bst_t *bst_remove(bst_t *root, int value)
