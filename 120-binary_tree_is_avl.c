@@ -43,7 +43,7 @@ int is_avl_helper(const binary_tree_t *tree, int lo, int hi)
 		if (diff > 1)
 			return (0);
 		return (is_avl_helper(tree->left, lo, tree->n - 1) &&
-				is_avl_helper(tree->right, tree->n + 1, hi));
+			is_avl_helper(tree->right, tree->n + 1, hi));
 	}
 	return (1);
 }
